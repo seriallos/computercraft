@@ -18,7 +18,7 @@ This script is kept up-to-date at pastebin at http://pastebin.com/55tqszpw
 Pulls all programs from this repo and a few other nices one.  Second level of bootstrapping
 is because it's easier for me to modify files on github than on pastebin.
 
-** Pastebin Programs **
+**Pastebin Programs**
 
 * quarry: More efficient excavate from Adam Smith. http://pastebin.com/PAPDddcb
 
