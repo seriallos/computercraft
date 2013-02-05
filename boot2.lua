@@ -32,8 +32,8 @@ http_runs = {
     ["seriallos/computercraft/master/stairs.lua"] = "stairs",
 
     -- apis
-    --["seriallos/computercraft/master/api/underscore.lua"] = "underscore",
-    --["seriallos/computercraft/master/api/twilio.lua"] = "twilio",
+    ["seriallos/computercraft/master/underscore.lua"] = "underscore",
+    ["seriallos/computercraft/master/twilio.lua"] = "twilio",
   },
 }
 
