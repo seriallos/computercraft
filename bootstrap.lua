@@ -16,25 +16,12 @@ http_runs = {
   ["pastebin"] = {
     -- github loader
     ["caMmH484"] = "github",
-
-    -- better quarry program from adam smith
-    ["PAPDddcb"] = "quarry",
   },
   -- make sure to use the right URL for raw.github.com
   ["github"] = {
 
-    -- gist loader
-    ["seriallos/computercraft/master/gist.lua"] = "gist",
-
-    -- chop down 2x2 redwoods
-    ["seriallos/computercraft/master/redwood.lua"] = "redwood",
-
-    -- dig stairs down into the ground
-    ["seriallos/computercraft/master/stairs.lua"] = "stairs",
-
-    -- apis
-    --["seriallos/computercraft/master/api/underscore.lua"] = "underscore",
-    --["seriallos/computercraft/master/api/twilio.lua"] = "twilio",
+    -- grab the github bootstrap
+    ["seriallos/computercraft/master/boot2.lua"] = "boot2",
   },
 }
 
@@ -45,3 +32,10 @@ for service, list in pairs( http_runs ) do
     shell.run( service, "get", id, program )
   end
 end
+
+-- run the bootstrapper from github
+-- second level of bootstrap is so the files on pastebin can be pretty static.
+-- github is way easier to manage from the command line.  i don't want to
+-- constantly be futzing with the pastebin site or API.
+-- git add .; git commit -m "blah"; git push  # so much better!
+shell.run( "boot2" )
