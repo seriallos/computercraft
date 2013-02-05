@@ -7,19 +7,34 @@ of 'pastebin get'
 
 Usage:
 
-> pastebin get 55tqszpw bootstrap
-> bootstrap
+  > pastebin get 55tqszpw bootstrap
+  > bootstrap
 
 --]]
 
 http_runs = {
   ["pastebin"] = {
-    ["rMF5V31f"] = "gist",
+    -- github loader
+    ["caMmH484"] = "github",
+
+    -- better quarry program from adam smith
     ["PAPDddcb"] = "quarry",
   },
-  ["gist"] = {
-    ["4700035"] = "redwood",
-    ["4700006"] = "stairs",
+  -- make sure to use the right URL for raw.github.com
+  ["github"] = {
+
+    -- gist loader
+    ["seriallos/computercraft/master/gist.lua"] = "gist",
+
+    -- chop down 2x2 redwoods
+    ["seriallos/computercraft/master/redwood.lua"] = "redwood",
+
+    -- dig stairs down into the ground
+    ["seriallos/computercraft/master/stairs.lua"] = "stairs",
+
+    -- apis
+    --["seriallos/computercraft/master/api/underscore.lua"] = "underscore",
+    --["seriallos/computercraft/master/api/twilio.lua"] = "twilio",
   },
 }
 
