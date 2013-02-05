@@ -11,11 +11,23 @@ Scripts
 On the server I play on, pastebin is already present as a program.  This script
 is pulled from pastebin and then loads all scripts in this repo.
 
+This script is kept up-to-date at pastebin at http://pastebin.com/55tqszpw
+
+* github.lua
+
+Downloads and saves a script from Github
+
+    USAGE: github get <GITHUB-PATH> <PROGRAM-NAME>
+    EXAMPLE: github get seriallos/computercraft/master/redwood.lua redwood
+
+Cross-posted on pastebin at 
+
 * gist.lua
 
 Load Gists as a program.
 
     USAGE: gist get <GIST-ID> <PROGRAM-NAME>
+    EXAMPLE: gist get 4700006 stairs
 
 * redwood.lua
 
