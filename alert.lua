@@ -8,12 +8,18 @@ if( #tArgs ~= 5 ) then
   return
 end
 
-local sid = tArgs[ 1 ]
-local token = tArgs[ 2 ]
-local from = tArgs[ 3 ]
-local to = tArgs[ 4 ]
-local msg = tArgs[ 5 ]
+local sid = tostring( tArgs[ 1 ] )
+local token = tostring( tArgs[ 2 ] )
+local from = tostring( tArgs[ 3 ] )
+local to = tostring( tArgs[ 4 ] )
+local msg = tostring( tArgs[ 5 ] )
 
 os.loadAPI("twilio")
 
-twilio.sms( sid, token, from, to, msg )
+twilio.sms(
+  sid,
+  token,
+  from,
+  to,
+  msg
+)
