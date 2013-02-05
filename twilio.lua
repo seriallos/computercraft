@@ -1,4 +1,5 @@
 -- Original from https://github.com/webscriptio/lib/blob/master/twilio.lua
+-- Modified to work as a ComputerCraft API
 
 -- ComputerCraft API load
 os.loadAPI("underscore")
@@ -7,7 +8,7 @@ os.loadAPI("underscore")
 -- local underscore = require('underscore')
 
 -- Verify that an incoming request came from Twilio
-local verify = function (request, authtoken)
+function verify(request, authtoken)
 	-- Start with the full URL
 	local sts = request.scheme .. '://' .. request.headers.Host .. request.path
 	-- Including the querystring (if any)
@@ -26,7 +27,7 @@ local verify = function (request, authtoken)
 	return request.headers['X-Twilio-Signature'] == base64.encode(hmac)
 end
 
-local sms = function (accountsid, authtoken, from, to, body)
+function sms(accountsid, authtoken, from, to, body)
 	return http.request {
 		method = 'POST',
 		url = string.format('https://api.twilio.com/2010-04-01/Accounts/%s/SMS/Messages.json', accountsid),
@@ -35,7 +36,7 @@ local sms = function (accountsid, authtoken, from, to, body)
 	}
 end
 
-local call = function (accountsid, authtoken, from, to, url)
+function call(accountsid, authtoken, from, to, url)
 	return http.request {
 		method = 'POST',
 		url = string.format('https://api.twilio.com/2010-04-01/Accounts/%s/Calls.json', accountsid),
@@ -44,4 +45,3 @@ local call = function (accountsid, authtoken, from, to, url)
 	}
 end
 
-return { verify = verify, sms = sms, call = call }
