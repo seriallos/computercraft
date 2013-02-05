@@ -16,10 +16,4 @@ local msg = tostring( tArgs[ 5 ] )
 
 os.loadAPI("twilio")
 
-twilio.sms(
-  sid,
-  token,
-  from,
-  to,
-  msg
-)
+twilio.sms( sid, token, from, to, msg )
