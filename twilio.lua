@@ -1,7 +1,7 @@
 -- Original from https://github.com/webscriptio/lib/blob/master/twilio.lua
 
 -- ComputerCraft API load
-os.loadApi("twilio")
+os.loadAPI("underscore")
 
 -- original include
 -- local underscore = require('underscore')
