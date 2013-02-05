@@ -21,7 +21,7 @@ if fs.exists( program ) then
 end
 
 -- TODO: maybe handle multifile gists?
-local gist_url = "http://gist.github.com/raw/" .. gist_id
+local gist_url = "https://gist.github.com/raw/" .. gist_id
 
 local request = http.get( gist_url )
 local response = request.readAll()
