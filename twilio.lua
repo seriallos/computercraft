@@ -1,9 +1,9 @@
 
 function sms( sid, token, from, to, msg )
   -- hack test for now
-  local url = "http://davehendler.com/twiliotest.php?msg=testing"
+  local url = "http://dev.davehendler.com/twiliotest.php?msg="..msg
   local request = http.get( url )
-  local response = request.readAll()
-  print( response )
-  request.close()
+  if request then
+    request.close()
+  end
 end
