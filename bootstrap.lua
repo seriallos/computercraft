@@ -26,9 +26,8 @@ http_runs = {
 }
 
 for service, list in pairs( http_runs ) do
-  print( service )
   for id, program in pairs( list ) do
-    print( "  Downloading "..program.." ("..id..")" )
+    print( "Downloading "..program.." from "..service )
     shell.run( service, "get", id, program )
   end
 end
