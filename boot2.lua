@@ -31,6 +31,9 @@ http_runs = {
     -- dig stairs down into the ground
     ["seriallos/computercraft/master/stairs.lua"] = "stairs",
 
+    -- twilio test program
+    ["seriallos/computercraft/master/alert.lua"] = "alert",
+
     -- apis
     ["seriallos/computercraft/master/underscore.lua"] = "underscore",
     ["seriallos/computercraft/master/twilio.lua"] = "twilio",
