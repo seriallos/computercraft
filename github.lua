@@ -26,16 +26,6 @@ local request = http.get( github_url )
 local response = request.readAll()
 request.close()
 
--- split program name on slashes and create any directories needed
-path_parts = split( program, "/" )
-
-local working_path = ""
-for i=1, #path_parts - 1 do
-  working_path = working_path .. "/" .. path_parts[i]
-  print( "mkdir "..working_path )
-  mkdir( working_path )
-end
-
 local file = fs.open( program, "w" )
 file.write( response )
 file.close()
